@@ -56,8 +56,25 @@ void playGame()
 
 	for (int32 i = 1; i <= MaxTries; i++)
 	{
-	
 		FText guess = getGuess();
+
+		EGuessStatus Status = BCGame.CheckGuessValibility(guess); 
+
+		switch (Status)
+		{
+		case EGuessStatus::OK:
+			break;
+		case EGuessStatus::Not_Isogram:
+			break;
+		case EGuessStatus::Wrong_Length:
+			std::cout << "Please enter a " << BCGame.
+			break;
+		case EGuessStatus::Not_LowerCase:
+			break;
+		default:
+			break;
+		}
+
 
 		FBullCowsCount BullCowCount =  BCGame.SubmitGuess(guess);
 

@@ -67,7 +67,21 @@ bool FBullCowGame::IsGameWon() const
 	return false;
 }
 
-bool FBullCowGame::CheckGuessValibility(FString)
+EGuessStatus FBullCowGame::CheckGuessValibility(FString guess)
 {
-	return false;
+//	if (false)
+//	{
+//		return EGuessStatus::Not_Isogram;
+//	} else if (false)
+//	{
+//		return EGuessStatus::Not_Isogram;
+//	}
+//	else if (guess.length() != My() )
+//	{
+//		return EGuessStatus::Wrong_Length;
+//	}
+//	else
+	{
+		return EGuessStatus::OK;
+	}
 }
